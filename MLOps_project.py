@@ -6,7 +6,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.tree import DecisionTreeRegressor
 from typing import Any, Dict, Literal
-# YOUR IMPORTS HERE
+
 import io
 import pytz
 import logging
@@ -69,7 +69,7 @@ def configure_mlflow():
 
 
 def init(**kwargs) -> Dict[str, Any]:
-    # YOUR CODE HERE
+
     # логирование
     m_name = kwargs['templates_dict']['m_name'] # получаем имя для логирования
     start = datetime.now(pytz.timezone("Europe/Moscow")).strftime("%A, %D, %H:%M")
@@ -105,7 +105,7 @@ def init(**kwargs) -> Dict[str, Any]:
 
 
 def get_data(**kwargs) -> Dict[str, Any]:
-    # YOUR CODE HERE
+
 
     # получения словаря main_metrics
     ti = kwargs['ti']
@@ -146,7 +146,7 @@ def get_data(**kwargs) -> Dict[str, Any]:
     return main_metrics
 
 def prepare_data(**kwargs) -> Dict[str, Any]:
-    # YOUR CODE HERE
+    
 
     # логирование  
     m_name = kwargs['templates_dict']['m_name'] # получаем имя для скачивания папки с данными на s3 и логирования
@@ -210,7 +210,7 @@ def prepare_data(**kwargs) -> Dict[str, Any]:
 
 
 def train_model(**kwargs) -> Dict[str, Any]:
-    # YOUR CODE HERE
+    
 
     # логирование
     m_name = kwargs['templates_dict']['m_name'] # получаем имя для скачивания папки с данными на s3 и логирования
@@ -290,7 +290,7 @@ def train_model(**kwargs) -> Dict[str, Any]:
 
 
 def save_results(**kwargs) -> None:
-    # YOUR CODE HERE
+    
 
     #получаем имя для сохранения результата
     m_name = kwargs['templates_dict']['m_name']

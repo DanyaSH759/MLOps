@@ -4,7 +4,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.tree import DecisionTreeRegressor
 from typing import Any, Dict, Literal
 
-# YOUR IMPORTS HERE
+
 import json
 import pickle
 import io
@@ -55,7 +55,7 @@ def create_dag(dag_id: str, m_name: Literal["random_forest", "linear_regression"
 
     def init(**kwargs) -> Dict[str, Any]:
 
-        # YOUR CODE HERE
+        
 
         # логирование
         start = datetime.now(pytz.timezone("Europe/Moscow")).strftime("%A, %D, %H:%M")
@@ -67,7 +67,7 @@ def create_dag(dag_id: str, m_name: Literal["random_forest", "linear_regression"
     
     def get_data(**kwargs) -> Dict[str, Any]:
         
-        # YOUR CODE HERE
+        
 
         # логирование
         start = datetime.now(pytz.timezone("Europe/Moscow")).strftime("%A, %D, %H:%M")
@@ -101,7 +101,7 @@ def create_dag(dag_id: str, m_name: Literal["random_forest", "linear_regression"
     
     
     def prepare_data(**kwargs) -> Dict[str, Any]:
-        # YOUR CODE HERE
+        
 
         # логирование
         start = datetime.now(pytz.timezone("Europe/Moscow")).strftime("%H:%M")
@@ -158,7 +158,7 @@ def create_dag(dag_id: str, m_name: Literal["random_forest", "linear_regression"
 
 
     def train_model(**kwargs) -> Dict[str, Any]:
-        # YOUR CODE HERE
+        
 
         # логирование
         start = datetime.now(pytz.timezone("Europe/Moscow")).strftime("%H:%M")
@@ -196,7 +196,7 @@ def create_dag(dag_id: str, m_name: Literal["random_forest", "linear_regression"
                 "metrics": result}
 
     def save_results(**kwargs) -> None:
-        # YOUR CODE HERE
+        
 
         # Получаем конекст полученный со всех функций
         ti = kwargs['ti']
